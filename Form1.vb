@@ -1,5 +1,6 @@
+'Amira Abdulhamid Annubi - 1st architecture
 Public Class Form1
-    Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
+    Private Sub btnCalculate_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCalculate.Click
         Dim distance As Double
         Double.TryParse(txtDistanceTravelled.Text, distance)
 
@@ -11,8 +12,7 @@ Public Class Form1
         End If
         txtResult.Text = CalculateFare(distance, passengerCount)
     End Sub
-    
-    Private Function CalculateFare(distance As Double, passengerCount As Int32) As String
+    Private Function CalculateFare(ByVal distance As Double, ByVal passengerCount As Int32) As String
         Const fixedInitialAmount = 3
 
         Dim fare = fixedInitialAmount + ((distance - 1) * passengerCount)
